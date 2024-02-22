@@ -1,10 +1,10 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
     <>
       <h1>HomePage</h1>
-      <NavLink to={"/rent"}>Choose Your Car</NavLink>
+      <Link to={"/rent"}>Choose Your Car</Link>
     </>
   );
 };
