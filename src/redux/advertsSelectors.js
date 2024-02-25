@@ -6,6 +6,8 @@ export const selectFilter = state => state.filter;
 
 export const selectFavorite = state => state.favorites;
 
+export const selectIsLoading = state => state.adverts.isLoading;
+
 
 export const selectVisibleAdverts = createSelector(
 	[selectAllAdverts, selectFilter],

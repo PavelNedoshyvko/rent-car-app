@@ -88,18 +88,6 @@ export const InputFromTo = styled(Field)`
   /* appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none; */
-
-  /* &:focus {
-    border: none;
-  } */
-
-  /* &:first-child {
-    padding-left: 50px;
-  } */
-
-  /* &:not(:last-child) {
-    border-right: 1px solid red;
-  } */
 `;
 
 export const OptionDefault = styled.option`

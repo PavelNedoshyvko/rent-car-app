@@ -5,15 +5,22 @@ import { Gallery } from "../components/Gallery/Gallery";
 import { Filter } from "../components/Filter/Filter";
 import { GalleryContainer } from "../components/UI/GalleryContainer/GalleryContainer.styled";
 import { LoadMoreBtn } from "../components/UI/LoadMoreButton/LoadMoreButton.styled";
-import { selectFilter, selectVisibleAdverts } from "../redux/advertsSelectors";
+import {
+  selectFilter,
+  selectIsLoading,
+  selectVisibleAdverts,
+} from "../redux/advertsSelectors";
 import { HeaderWrap } from "../components/Header/Header.styled";
 import { PageLink } from "./RentPage.styled";
+import { Loader } from "../components/UI/Loader/Loader";
 // import { NewFilter } from "../components/Filter/NewFilter";
 
 const RentPage = () => {
   const dispatch = useDispatch();
 
   const visibleAdverts = useSelector(selectVisibleAdverts);
+
+  const loading = useSelector(selectIsLoading);
 
   const [page, setPage] = useState(1);
   const filter = useSelector(selectFilter);
@@ -40,6 +47,7 @@ const RentPage = () => {
 
   return (
     <>
+      {loading && <Loader />}
       <HeaderWrap>
         <PageLink to={"/"}>Home Page</PageLink>
         <PageLink to={"/favorite"}>Favorite Page</PageLink>
