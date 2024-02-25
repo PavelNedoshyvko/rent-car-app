@@ -25,7 +25,33 @@ export const InputWrap = styled.div`
 `;
 
 export const FromToWrap = styled.div`
+  position: relative;
   display: flex;
+  width: 320px;
+  border-radius: 14px;
+  background-color: #f7f7fb;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 160px;
+    width: 2px;
+    height: 48px;
+    background-color: rgb(138, 138, 137, 0.2);
+  }
+`;
+
+export const FromWrap = styled.span`
+  position: absolute;
+  top: 15px;
+  left: 30px;
+`;
+
+export const ToWrap = styled.span`
+  position: absolute;
+  top: 15px;
+  left: 190px;
 `;
 
 export const Input = styled(Field)`
@@ -40,9 +66,40 @@ export const Input = styled(Field)`
   font-size: 18px;
   line-height: 1.11111;
   color: #121417;
+  outline: none;
   /* appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none; */
+`;
+
+export const InputFromTo = styled(Field)`
+  width: 160px;
+  height: 48px;
+  padding-left: 80px;
+  padding-right: 18px;
+  border: none;
+  border-radius: 14px;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.11111;
+  color: #121417;
+  outline: none;
+  /* appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none; */
+
+  /* &:focus {
+    border: none;
+  } */
+
+  /* &:first-child {
+    padding-left: 50px;
+  } */
+
+  /* &:not(:last-child) {
+    border-right: 1px solid red;
+  } */
 `;
 
 export const OptionDefault = styled.option`

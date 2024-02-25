@@ -1,14 +1,10 @@
-import { useSelector } from "react-redux";
-import { selectVisibleAdverts } from "../../redux/advertsSelectors";
 import { Card } from "../Card/Card";
 import { GalleryItem, GalleryList } from "./Gallery.styled";
 
-export const Gallery = () => {
-  const visibleAdverts = useSelector(selectVisibleAdverts);
-
+export const Gallery = ({ visibleadverts }) => {
   return (
     <GalleryList>
-      {visibleAdverts.map((advert) => (
+      {visibleadverts.map((advert) => (
         <GalleryItem key={advert.id}>
           <Card advert={advert} />
         </GalleryItem>

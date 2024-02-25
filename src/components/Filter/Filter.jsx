@@ -5,10 +5,13 @@ import { selectAllAdverts } from "../../redux/advertsSelectors";
 import {
   FilterWrap,
   FromToWrap,
+  FromWrap,
   Input,
+  InputFromTo,
   InputWrap,
   Option,
   OptionDefault,
+  ToWrap,
 } from "./Filter.styled";
 import { Button } from "../UI/Button/Button";
 import { changeFilter } from "../../redux/filterSlice";
@@ -83,15 +86,6 @@ export const Filter = () => {
                     {rentalPrice.substring(1)}
                   </Option>
                 ))}
-
-                {/* {adverts.map(({ id, rentalPrice }) => {
-                console.log(rentalPrice.substring(1)); // Отладка: Отслеживание значений rentalPrice
-                return (
-                  <Option key={id} value={rentalPrice.substring(1)}>
-                    {rentalPrice.substring(1)}
-                  </Option>
-                );
-              })} */}
               </Input>
             </InputWrap>
 
@@ -99,12 +93,16 @@ export const Filter = () => {
               <label htmlFor="carMileage">Car mileage / km </label>
               <FromToWrap>
                 <div>
-                  <span>From</span>
-                  <Input type="text" id="mileageFrom" name="mileageFrom" />
+                  <FromWrap>From</FromWrap>
+                  <InputFromTo
+                    type="text"
+                    id="mileageFrom"
+                    name="mileageFrom"
+                  />
                 </div>
                 <div>
-                  <span>To</span>
-                  <Input type="text" id="mileageTo" name="mileageTo" />
+                  <ToWrap>To</ToWrap>
+                  <InputFromTo type="text" id="mileageTo" name="mileageTo" />
                 </div>
               </FromToWrap>
             </InputWrap>

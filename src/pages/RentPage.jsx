@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { allAdvertsThunk } from "../redux/advertsOperation";
 import { useEffect, useState } from "react";
@@ -6,11 +5,15 @@ import { Gallery } from "../components/Gallery/Gallery";
 import { Filter } from "../components/Filter/Filter";
 import { GalleryContainer } from "../components/UI/GalleryContainer/GalleryContainer.styled";
 import { LoadMoreBtn } from "../components/UI/LoadMoreButton/LoadMoreButton.styled";
-import { selectFilter } from "../redux/advertsSelectors";
+import { selectFilter, selectVisibleAdverts } from "../redux/advertsSelectors";
+import { HeaderWrap } from "../components/Header/Header.styled";
+import { PageLink } from "./RentPage.styled";
 // import { NewFilter } from "../components/Filter/NewFilter";
 
 const RentPage = () => {
   const dispatch = useDispatch();
+
+  const visibleAdverts = useSelector(selectVisibleAdverts);
 
   const [page, setPage] = useState(1);
   const filter = useSelector(selectFilter);
@@ -37,14 +40,15 @@ const RentPage = () => {
 
   return (
     <>
-      <h1>RentPage</h1>
+      <HeaderWrap>
+        <PageLink to={"/"}>Home Page</PageLink>
+        <PageLink to={"/favorite"}>Favorite Page</PageLink>
+      </HeaderWrap>
 
-      <Link to={"/favorite"}>To Favorite Page</Link>
-      <Link to={"/"}>To Home Page</Link>
       <GalleryContainer>
         <Filter />
-        <Gallery />
-        {renderBtnLoadMore && (
+        <Gallery visibleadverts={visibleAdverts} />
+        {visibleAdverts.length > 0 && renderBtnLoadMore && (
           <LoadMoreBtn type="button" onClick={loadMore}>
             Load more
           </LoadMoreBtn>
