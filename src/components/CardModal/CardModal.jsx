@@ -4,6 +4,7 @@ import {
   AccessoriesWrap,
   CloseModalBtn,
   ConditionsTitle,
+  ConditionsWrap,
   Description,
   Image,
   ImageWrap,
@@ -57,34 +58,42 @@ export const CardModal = ({ modalIsOpen, closeModal, data }) => {
         <Price>{rentalPrice}</Price>
       </TitleWrap>
       <ParamsWrap>
-        <span>{city}</span>
-        <span>{country}</span>
-        <span>Id: {id}</span>
-        <span>Year: {year}</span>
-        <span>Type: {type}</span>
-        <span>Fuel Consumption: {fuelConsumption}</span>
-        <span>Engine Size: {engineSize}</span>
+        <li>{city}</li>
+        <li>{country}</li>
+        <li>Id: {id}</li>
+        <li>Year: {year}</li>
+        <li>Type: {type}</li>
+        <li>Fuel Consumption: {fuelConsumption}</li>
+        <li>Engine Size: {engineSize}</li>
       </ParamsWrap>
       <Description>{description}</Description>
 
       <AccessoriesTitle>Accessories and functionalities:</AccessoriesTitle>
       <AccessoriesWrap>
         {accessories.map((item, idx) => (
-          <span key={idx}>{item}</span>
+          <li key={idx}>{item}</li>
         ))}
         {functionalities.map((item, idx) => (
-          <span key={idx}>{item}</span>
+          <li key={idx}>{item}</li>
         ))}
       </AccessoriesWrap>
 
       <ConditionsTitle>Rental Conditions:</ConditionsTitle>
-      <ul>
+      <ConditionsWrap>
         {conditions.map((item, idx) => (
-          <li key={idx}>{item}</li>
+          <li key={idx}>
+            {idx === 0 ? `${item.split(":")[0]}:` : item.split(":")[0]}
+            <span>{item.split(":").slice(1).join(":")}</span>
+          </li>
         ))}
-        <li>Mileage: {formattedMileage}</li>
-        <li>Price: {formattedRentalPrice}</li>
-      </ul>
+
+        <li>
+          Mileage: <span>{formattedMileage}</span>
+        </li>
+        <li>
+          Price: <span>{formattedRentalPrice}</span>
+        </li>
+      </ConditionsWrap>
       <RentalLink href="tel:+380730000000">Rental car</RentalLink>
       <CloseModalBtn onClick={closeModal}>✕</CloseModalBtn>
     </Modal>

@@ -42,7 +42,7 @@ export const Price = styled.span`
   color: #121417;
 `;
 
-export const ParamsWrap = styled.div`
+export const ParamsWrap = styled.ul`
   display: flex;
   flex-wrap: wrap;
   max-height: 40px;
@@ -51,7 +51,7 @@ export const ParamsWrap = styled.div`
   margin-bottom: 14px;
   gap: 6px;
 
-  span {
+  li {
     font-size: 12px;
     line-height: 1.5;
     color: rgba(18, 20, 23, 0.5);
@@ -78,7 +78,7 @@ export const AccessoriesTitle = styled.h4`
   color: #121417;
 `;
 
-export const AccessoriesWrap = styled.div`
+export const AccessoriesWrap = styled.ul`
   display: flex;
   flex-wrap: wrap;
   max-height: 40px;
@@ -87,7 +87,7 @@ export const AccessoriesWrap = styled.div`
   overflow: hidden;
   gap: 6px;
 
-  span {
+  li {
     font-size: 12px;
     line-height: 1.5;
     color: rgba(18, 20, 23, 0.5);
@@ -130,7 +130,7 @@ export const RentalLink = styled.a`
 
 export const CloseModalBtn = styled.button`
   background-color: transparent;
-  color: var(--modal-close-icon-color);
+  color: #121417;
   border: none;
   position: absolute;
   top: 14px;
@@ -139,4 +139,32 @@ export const CloseModalBtn = styled.button`
   height: 18px;
   padding: 0;
   cursor: pointer;
+  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    scale: 1.3;
+  }
+`;
+
+export const ConditionsWrap = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 400px; */
+  margin-bottom: 24px;
+  gap: 8px;
+
+  li {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #363535;
+
+    border-radius: 35px;
+    padding: 7px 14px;
+    background: #f9f9f9;
+  }
+
+  span {
+    font-weight: 600;
+    color: #3470ff;
+  }
 `;

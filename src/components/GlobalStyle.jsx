@@ -51,6 +51,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+	
+	/* overflow: ${(props) => (props.modalOpen ? "hidden" : "auto")}; */
+
+	&.ReactModal__Body--open{
+		overflow: hidden;
+	}
 }
 
 code {

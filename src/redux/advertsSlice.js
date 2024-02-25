@@ -13,9 +13,11 @@ const advertsSlice = createSlice({
 	extraReducers: builder =>
 		builder
 			.addCase(allAdvertsThunk.fulfilled, (state, action) => {
-				state.error = null;
-				state.adverts = action.payload;
+				const uniqueAdverts = action.payload.filter(
+					newAdvert => !state.adverts.some(existingAdvert => existingAdvert.id === newAdvert.id));
+				state.adverts.push(...uniqueAdverts);
 				state.isLoading = false;
+				state.error = null;
 			})
 			.addMatcher(
 				isAnyOf(

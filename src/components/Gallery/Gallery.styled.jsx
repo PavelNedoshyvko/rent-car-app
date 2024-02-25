@@ -7,7 +7,7 @@ export const GalleryList = styled.ul`
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 `;
 
 export const GalleryItem = styled.li`

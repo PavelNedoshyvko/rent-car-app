@@ -4,7 +4,7 @@ const HomePage = () => {
   return (
     <>
       <h1>HomePage</h1>
-      <Link to={"/rent"}>Choose Your Car</Link>
+      <Link to={"/catalog"}>Choose Your Car</Link>
     </>
   );
 };

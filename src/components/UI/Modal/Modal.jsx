@@ -6,7 +6,7 @@ const customStyles = {
   },
   content: {
     width: "541px",
-    // height: "752px",
+    maxHeight: "752px",
     margin: "auto",
     padding: "40px",
     border: "none",

@@ -17,6 +17,25 @@ export const Image = styled.img`
   object-fit: cover;
 `;
 
+export const Icon = styled.svg`
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 14px;
+  right: 14px;
+  fill: ${(props) => (props.$clicked ? "#3470ff" : "transparent")};
+  stroke: ${(props) =>
+    props.$clicked ? "#3470ff" : "rgba(255, 255, 255, 0.8)"};
+  cursor: pointer;
+
+  transition: all 450ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    stroke: #3470ff;
+    scale: 1.1;
+  }
+`;
+
 export const TitleWrap = styled.div`
   display: flex;
   align-items: center;

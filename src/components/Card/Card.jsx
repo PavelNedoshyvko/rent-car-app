@@ -1,5 +1,6 @@
 import { useModal } from "../../hooks/useModal";
 import {
+  Icon,
   ParamsWrap,
   Price,
   Title,
@@ -9,8 +10,14 @@ import {
 import { CardModal } from "../CardModal/CardModal";
 import { Button } from "../UI/Button/Button";
 import { Image, ImageWrap } from "./Card.styled";
+import icons from "../../../data/icons.svg";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleFavorite } from "../../redux/favoriteSlice";
+import { selectFavorite } from "../../redux/advertsSelectors";
 
 export const Card = ({ advert }) => {
+  const dispatch = useDispatch();
   const {
     id,
     img,
@@ -37,10 +44,34 @@ export const Card = ({ advert }) => {
   const text = `${make} ${model}`;
   const textWidth = context.measureText(text).width;
 
+  const favorites = useSelector(selectFavorite);
+
+  const isFavorite = favorites.some((favorite) => favorite.id === advert.id);
+
+  const [clicked, setClicked] = useState(isFavorite);
+
+  useEffect(() => {
+    const storedFavorites = localStorage.getItem("favorites");
+    if (storedFavorites) {
+      dispatch(toggleFavorite(JSON.parse(storedFavorites)));
+    }
+  }, [dispatch]);
+
+  const handleClick = () => {
+    setClicked((prevClicked) => !prevClicked);
+    dispatch(toggleFavorite(advert));
+  };
+
   return (
     <div>
+      <Icon>
+        <use href={icons + "#icon-heart"} />
+      </Icon>
       <ImageWrap>
         <Image src={img || photoLink} alt={`${make}, ${model}`} />
+        <Icon $clicked={clicked} onClick={handleClick}>
+          <use href={icons + "#icon-heart"} />
+        </Icon>
       </ImageWrap>
       <TitleWrap>
         <Title>
