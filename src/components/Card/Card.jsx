@@ -10,7 +10,7 @@ import {
 import { CardModal } from "../CardModal/CardModal";
 import { Button } from "../UI/Button/Button";
 import { Image, ImageWrap } from "./Card.styled";
-import icons from "../../../data/icons.svg";
+import icons from "../../data/icons.svg";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleFavorite } from "../../redux/favoriteSlice";

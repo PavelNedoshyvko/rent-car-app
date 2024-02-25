@@ -12,7 +12,7 @@ import {
 } from "./Filter.styled";
 import { Button } from "../UI/Button/Button";
 import { changeFilter } from "../../redux/filterSlice";
-import makes from "../../../data/makes.json";
+import makes from "../../data/makes.json";
 
 const FilterSchema = Yup.object().shape({
   brand: Yup.string(),
