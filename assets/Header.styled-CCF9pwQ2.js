@@ -1,4 +1,4 @@
-import{r as ne,u as y,e as Ye,f as Ve,g as Je,j as i,h as Qe,a as Xe,b as Ze,t as Ce}from"./index-DXh_Z3am.js";const et=()=>{const[t,e]=ne.useState(!1);return{isModalOpen:t,openModal:()=>{e(!0)},closeModal:()=>{e(!1)}}},tt=y.div`
+import{r as ne,u as y,e as Ye,f as Ve,g as Je,j as i,h as Qe,a as Xe,b as Ze,t as Ce}from"./index-B2pPn30y.js";const et=()=>{const[t,e]=ne.useState(!1);return{isModalOpen:t,openModal:()=>{e(!0)},closeModal:()=>{e(!1)}}},tt=y.div`
   position: relative;
   height: 268px;
   margin-bottom: 14px;
@@ -21,7 +21,7 @@ import{r as ne,u as y,e as Ye,f as Ve,g as Je,j as i,h as Qe,a as Xe,b as Ze,t a
   stroke: ${t=>t.$clicked?"#3470ff":"rgba(255, 255, 255, 0.8)"};
   cursor: pointer;
 
-  transition: all 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
     stroke: #3470ff;
