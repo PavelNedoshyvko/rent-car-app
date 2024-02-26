@@ -23,7 +23,7 @@ export const Highway = styled.div`
   bottom: 0;
   z-index: 1;
   background-repeat: repeat-x;
-  animation: highway 5s linear infinite;
+  animation: highway 8000ms linear infinite;
 
   @keyframes highway {
     100% {
@@ -83,7 +83,7 @@ export const Wheel = styled.div`
   display: flex;
   width: 310px;
   justify-content: space-between;
-  left: 969px;
+  left: 50.5%;
   bottom: 105px;
   transform: translateX(-50%);
   z-index: 2;
@@ -91,7 +91,7 @@ export const Wheel = styled.div`
   img {
     width: 65px;
     height: 65px;
-    animation: wheel 1s linear infinite;
+    animation: wheel 1000ms linear infinite;
 
     @keyframes wheel {
       100% {
