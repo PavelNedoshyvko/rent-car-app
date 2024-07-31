@@ -23,12 +23,11 @@ export const HomePageScreen = () => {
           <ChooseCar>Choose your car here</ChooseCar>
           <Car>
             <img src={car} alt="Car" />
+            <Wheel>
+              <img src={wheel} alt="Wheel" />
+              <img src={wheel} alt="Wheel" />
+            </Wheel>
           </Car>
-
-          <Wheel>
-            <img src={wheel} alt="Wheel" />
-            <img src={wheel} alt="Wheel" />
-          </Wheel>
         </Link>
       </World>
     </>

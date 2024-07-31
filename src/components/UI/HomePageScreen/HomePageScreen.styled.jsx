@@ -6,7 +6,7 @@ import city from "/images/city.png";
 export const World = styled.div`
   position: relative;
   min-height: 100vh;
-  width: 100%;
+  /* width: 100vh; */
   background-image: url(${sky});
   background-size: cover;
   overflow-x: hidden;
@@ -83,8 +83,8 @@ export const Wheel = styled.div`
   display: flex;
   width: 310px;
   justify-content: space-between;
-  left: 50.5%;
-  bottom: 105px;
+  left: 52.3%;
+  bottom: 4px;
   transform: translateX(-50%);
   z-index: 2;
 

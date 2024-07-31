@@ -13,6 +13,8 @@ import {
 import { HeaderWrap } from "../components/Header/Header.styled";
 import { PageLink } from "./RentPage.styled";
 import { Loader } from "../components/UI/Loader/Loader";
+import { Logo } from "../components/UI/Logo/Logo";
+import { Link } from "react-router-dom";
 // import { NewFilter } from "../components/Filter/NewFilter";
 
 const RentPage = () => {
@@ -49,6 +51,10 @@ const RentPage = () => {
     <>
       {loading && <Loader />}
       <HeaderWrap>
+        <Link to={"/"}>
+          <Logo />
+        </Link>
+
         <PageLink to={"/"}>Home Page</PageLink>
         <PageLink to={"/favorite"}>Favorite Page</PageLink>
       </HeaderWrap>
