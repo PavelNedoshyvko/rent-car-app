@@ -1,4 +1,4 @@
-import{u as e,j as t,L as r}from"./index-BkQGk1kN.js";import{c as i,w as a}from"./wheel-De3T1mCu.js";const o="/rent-car-app/images/sky.jpg",n="/rent-car-app/images/road.jpg",s="/rent-car-app/images/city.png",c=e.div`
+import{u as e,j as t,L as r}from"./index-TktM6tT3.js";import{c as i,w as a}from"./wheel-De3T1mCu.js";const o="/rent-car-app/images/sky.jpg",n="/rent-car-app/images/road.jpg",s="/rent-car-app/images/city.png",c=e.div`
   position: relative;
   min-height: 100vh;
   /* width: 100vh; */
