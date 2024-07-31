@@ -11,7 +11,7 @@ import {
   selectVisibleAdverts,
 } from "../redux/advertsSelectors";
 import { HeaderWrap } from "../components/Header/Header.styled";
-import { PageLink } from "./RentPage.styled";
+import { PageLink, RentPageWrap } from "./RentPage.styled";
 import { Loader } from "../components/UI/Loader/Loader";
 import { Logo } from "../components/UI/Logo/Logo";
 import { Link } from "react-router-dom";
@@ -48,7 +48,7 @@ const RentPage = () => {
   };
 
   return (
-    <>
+    <RentPageWrap>
       {loading && <Loader />}
       <HeaderWrap>
         <Link to={"/"}>
@@ -68,7 +68,7 @@ const RentPage = () => {
           </LoadMoreBtn>
         )}
       </GalleryContainer>
-    </>
+    </RentPageWrap>
   );
 };
 

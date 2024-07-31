@@ -5,6 +5,7 @@ import { GalleryContainer } from "../components/UI/GalleryContainer/GalleryConta
 import { HeaderWrap } from "../components/Header/Header.styled";
 import { PageLink } from "./FavoritePage.styled";
 import { Link } from "react-router-dom";
+import { Logo } from "../components/UI/Logo/Logo";
 
 const FavoritePage = () => {
   const favoriteAdverts = useSelector(selectFavorite);
