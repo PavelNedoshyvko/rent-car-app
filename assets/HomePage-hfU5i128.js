@@ -1,11 +1,11 @@
-import{u as e,j as t,L as r}from"./index-BKvbRe_C.js";const i="/rent-car-app/images/sky.jpg",n="/rent-car-app/images/road.jpg",o="/rent-car-app/images/city.png",s=e.div`
+import{u as e,j as t,L as r}from"./index-BkQGk1kN.js";import{c as i,w as a}from"./wheel-De3T1mCu.js";const o="/rent-car-app/images/sky.jpg",n="/rent-car-app/images/road.jpg",s="/rent-car-app/images/city.png",c=e.div`
   position: relative;
   min-height: 100vh;
-  width: 100%;
-  background-image: url(${i});
+  /* width: 100vh; */
+  background-image: url(${o});
   background-size: cover;
   overflow-x: hidden;
-`,c=e.div`
+`,l=e.div`
   position: absolute;
   height: 200px;
   width: 500%;
@@ -23,11 +23,11 @@ import{u as e,j as t,L as r}from"./index-BKvbRe_C.js";const i="/rent-car-app/ima
       transform: translateX(-3400px);
     }
   }
-`,l=e.div`
+`,p=e.div`
   position: absolute;
   height: 250px;
   width: 500%;
-  background-image: url(${o});
+  background-image: url(${s});
   left: 0;
   right: 0;
   bottom: 200px;
@@ -41,7 +41,7 @@ import{u as e,j as t,L as r}from"./index-BKvbRe_C.js";const i="/rent-car-app/ima
       transform: translateX(-1400px);
     }
   }
-`,p=e.div`
+`,m=e.div`
   position: absolute;
   width: 400px;
   left: 50%;
@@ -65,13 +65,13 @@ import{u as e,j as t,L as r}from"./index-BKvbRe_C.js";const i="/rent-car-app/ima
       transform: translateY(-1px);
     }
   }
-`,m=e.div`
+`,h=e.div`
   position: absolute;
   display: flex;
   width: 310px;
   justify-content: space-between;
-  left: 50.5%;
-  bottom: 105px;
+  left: 52.3%;
+  bottom: 4px;
   transform: translateX(-50%);
   z-index: 2;
 
@@ -86,7 +86,7 @@ import{u as e,j as t,L as r}from"./index-BKvbRe_C.js";const i="/rent-car-app/ima
       }
     }
   }
-`,h=e.h1`
+`,x=e.h1`
   position: absolute;
   top: 10%;
   left: 50%;
@@ -96,7 +96,7 @@ import{u as e,j as t,L as r}from"./index-BKvbRe_C.js";const i="/rent-car-app/ima
   white-space: nowrap;
   text-transform: uppercase;
   color: #3470ff;
-`,x=e.h1`
+`,d=e.h1`
   position: absolute;
   top: 35%;
   left: 50%;
@@ -111,4 +111,4 @@ import{u as e,j as t,L as r}from"./index-BKvbRe_C.js";const i="/rent-car-app/ima
   &:hover {
     color: #a0bdff;
   }
-`,d="/rent-car-app/images/car.png",a="/rent-car-app/images/wheel.png",f=()=>t.jsx(t.Fragment,{children:t.jsxs(s,{children:[t.jsx(h,{children:"Rent a car for any occasion"}),t.jsx(c,{}),t.jsx(l,{}),t.jsxs(r,{to:"/catalog",children:[t.jsx(x,{children:"Choose your car here"}),t.jsx(p,{children:t.jsx("img",{src:d,alt:"Car"})}),t.jsxs(m,{children:[t.jsx("img",{src:a,alt:"Wheel"}),t.jsx("img",{src:a,alt:"Wheel"})]})]})]})}),u=()=>t.jsx(t.Fragment,{children:t.jsx(f,{})});export{u as default};
+`,f=()=>t.jsx(t.Fragment,{children:t.jsxs(c,{children:[t.jsx(x,{children:"Rent a car for any occasion"}),t.jsx(l,{}),t.jsx(p,{}),t.jsxs(r,{to:"/catalog",children:[t.jsx(d,{children:"Choose your car here"}),t.jsxs(m,{children:[t.jsx("img",{src:i,alt:"Car"}),t.jsxs(h,{children:[t.jsx("img",{src:a,alt:"Wheel"}),t.jsx("img",{src:a,alt:"Wheel"})]})]})]})]})}),b=()=>t.jsx(t.Fragment,{children:t.jsx(f,{})});export{b as default};

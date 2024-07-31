@@ -1,4 +1,4 @@
-import{r as ne,u as b,e as Ge,f as Ve,g as Je,j as i,i as Qe,a as Xe,b as Ze,t as Ce}from"./index-BKvbRe_C.js";const et=()=>{const[t,e]=ne.useState(!1);return{isModalOpen:t,openModal:()=>{e(!0)},closeModal:()=>{e(!1)}}},tt=b.div`
+import{r as ne,u as b,e as Ge,f as Ve,g as Je,j as i,i as Qe,a as Xe,b as Ze,t as Ce}from"./index-BkQGk1kN.js";const et=()=>{const[t,e]=ne.useState(!1);return{isModalOpen:t,openModal:()=>{e(!0)},closeModal:()=>{e(!1)}}},tt=b.div`
   position: relative;
   height: 268px;
   margin-bottom: 14px;
@@ -253,7 +253,6 @@ https://fb.me/react-async-component-lifecycle-hooks`)}if(typeof t.getDerivedStat
 `,zn=b.li`
   width: calc((100% - 29px * 3) / 4);
 `,Vn=({visibleadverts:t})=>i.jsx(Bn,{children:t.map(e=>i.jsx(zn,{children:i.jsx(qn,{advert:e})},e.id))}),Jn=b.div`
-  /* position: fixed; */
   display: flex;
   align-items: center;
   justify-content: space-around;
